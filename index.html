@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -109,21 +110,22 @@
                 <p>New Products</p>
                 <ol class="list">
                     <li><i title="Scroll Left" class="fa-solid fa-chevron-left"></i></li>
-                    <li><i title="Scroll Right" class="fa-solid fa-chevron-right"></i></li>
+                    <li onclick="rotateFirstCarousel()"><i title="Scroll Right" class="fa-solid fa-chevron-right"></i></li>
                 </ol>
             </div>
             <div class="newprodpic">
-                <img src="pics\newproduct-pic1.png" alt="new product">
-                <img src="pics\newproduct-pic2.png" alt="new product">
-                <img src="pics\newproduct-pic3.png" alt="new product">
-            </div>
-            <div class="newprodkids">
-                <ol class="list">
-                    <li>Baby Shop</li>
-                    <li><a title="Add to Wishlist" href="#"><i class="fa-solid fa-gift"></i></a></li>
-                    <li><a title="Add to Cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li>$99.<sup>00</sup></li>
-                </ol>
+                <img id="newProdPic1" src="pics\newproduct-pic1.png" alt="new product">
+                
+                <div class="newprodkids">
+                    <img id="newProdPic2" src="pics\newproduct-pic2.png" alt="new product">
+                    <ol class="list">
+                        <li>Baby Shop</li>
+                        <li><a title="Add to Wishlist" href="#"><i class="fa-solid fa-gift"></i></a></li>
+                        <li><a title="Add to Cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li>$99.<sup>00</sup></li>
+                    </ol>
+                </div>
+                <img id="newProdPic3" src="pics\newproduct-pic3.png" alt="new product">
             </div>
         
         
@@ -131,14 +133,14 @@
                 <p>Featured Products</p>
                 <ol class="list">
                     <li><i title="Scroll Left" class="fa-solid fa-chevron-left"></i></li>
-                    <li><i title="Scroll Right" class="fa-solid fa-chevron-right"></i></li>
+                    <li onclick="rotateSecondCarousel()"><i title="Scroll Right" class="fa-solid fa-chevron-right"></i></li>
                 </ol>
             </div>
             <div class="feturedpic">
-                <img src="pics\featured-1.png" alt="new product">
-                <img src="pics\featured-2.png" alt="new product">
-                <img src="pics\featured-3.png" alt="new product">
-                <img src="pics\featured-4.png" alt="new product">
+                <img src="pics\featured-1.png" id="featured-1" alt="new product">
+                <img src="pics\featured-2.png" id="featured-2" alt="new product">
+                <img src="pics\featured-3.png" id="featured-3" alt="new product">
+                <img src="pics\featured-4.png" id="featured-4" alt="new product">
             </div>
             <div class="feat1">
                 <p>Product Title here</p>
@@ -180,8 +182,7 @@
                     <li>$99.<sup>00</sup></li>
                 </ol>
             </div>
-            <p id="new">New</p>
-            <p id="off"> 20% OFF</p>
+    
         
             <div class="weare">
                 <p>Who We Are</p>
@@ -205,7 +206,7 @@
             <p id="item3text">Checkout</p>
         </div>
         <div id="buttonreg">
-            <button id="regbut" type="button" title="Register Now">Register Now</button>
+            <button id="regbut" onclick="OpenWindow('registrationForm.html')" type="button" title="Register Now">Register Now</button>
         </div>
     </main>
     <footer>
