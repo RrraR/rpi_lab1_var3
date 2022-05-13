@@ -3,6 +3,9 @@ var createform = document.createElement('form'); // Create New Element Form
 createform.setAttribute("action", ""); // Setting Action Attribute on Form
 createform.setAttribute("method", "post"); // Setting Method Attribute on Form
 x.appendChild(createform);
+
+//var closeBtn = document.createElement('&times;');
+
 var heading = document.createElement('h2'); // Heading of Form
 heading.innerHTML = "Registration Form ";
 createform.appendChild(heading);

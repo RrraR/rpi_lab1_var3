@@ -27,8 +27,8 @@
         <nav class="mid">
             <a href="#"><img src="pics/logo.png" alt="Gift Shop logo"></a>
             <ol class="list">
-                <li><a title="Register" href="#">Register</a></li>
-                <li><a title="Sign In" href="#">Sign In</a></li>
+                <li><a title="Register" id="signInLink" href="#">Register</a></li>
+                <li><a title="Sign In" id="registerLink" href="#">Sign In</a></li>
                 <li><a title="Add to Wishlist" href="#">Wishlist <i class="fa-solid fa-gift"></i></a></li>
                 <li><a title="Add to cart" href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a></li>
             </ol>
@@ -205,9 +205,10 @@
             <p id="item2text"> Register/ Login</p>
             <p id="item3text">Checkout</p>
         </div>
-        <div id="buttonreg">
-            <button id="regbut" onclick="OpenWindow('registrationForm.html')" type="button" title="Register Now">Register Now</button>
+        <div class="register_now" id="buttonreg">
+            <button class="now" id="regbut" type="button" title="Register Now">Register Now</button>
         </div>
+
     </main>
     <footer>
         <table id="table1"> 
@@ -276,5 +277,29 @@
         <p>Copyright © 2014 Gift Shop, All right reserved</p>
         <p>Designed by <span id="word"> Amysxain</span></p>
     </div>
+
+    <div id="my_modal" class="modal">
+        <div class="modal-content">
+            <div class="top_modal">
+                <p class="mod_registr">
+                    Registration
+                </p>
+                <span class="close">&times;</span>
+            </div>
+            <div class="form_inside">
+                <p>Name</p>
+                <input type="text" oninput="notNumbers(this)" class="modal_name" id="signUpUsername"
+                    placeholder="Enter your name" required> <br><br><br>
+                <p>Phone</p>
+                <input type="text" id="only_numb" class="modal_phone" placeholder="Enter your phone"
+                    oninput="changeHandler(this)" required> <br><br><br>
+                <p>Email</p>
+                <input type="email" class="modal_email" placeholder="Enter your Email" id="email_link" required>
+                <br><br><br>
+                <button id="modal-submit" onclick="saveRegistration()" disabled>Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="modal_w.js"></script>
 </body>
 </html>
